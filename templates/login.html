@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<title>Career Counseling Chatbot</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="https://mazipan.github.io/login-page-css/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://mazipan.github.io/login-page-css/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://mazipan.github.io/login-page-css/favicon/favicon-16x16.png">
+		<link rel="manifest" href="https://mazipan.github.io/login-page-css/manifest.json" />
+
+		<meta name="msapplication-TileColor" content="#fdcb04" />
+		<meta name="theme-color" content="#fdcb04" />
+		<link rel="manifest" href="https://mazipan.github.io/login-page-css/manifest.json">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+    <link rel="stylesheet" href="../css/login.css" />
+
+      <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="../css/jcarousel.css" rel="stylesheet" />
+  <link href="../css/flexslider.css" rel="stylesheet" />
+  <link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+        <header>
+          <div class="navbar navbar-default navbar-static-top">
+              <div class="container">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../img/phpp1fg88ql8pum8u0o1di2hc5.png" alt="logo" style="width: 8%; height: auto;">Career Counselling Chatbot</a>                </div>
+                    </div>
+                  <div class="navbar-collapse collapse ">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li> 
+                        <li><a href="{{ url_for('about') }}">ChatBot</a></li>
+                        <li><a href="{{ url_for('courses') }}">Events</a></li>
+                        <li><a href="{{ url_for('contact') }}">Counsellers</a></li>
+                        <li>
+                          {% if 'loggedin' in session %}
+                              <div class="user-section">
+                                  <span class="user-greeting" id="user-greeting">Hello, {{ session['name'] }}</span>
+                                  <a class="logout-button" href="{{ url_for('logout') }}">Logout</a>
+                              </div>
+                          {% else %}
+                              <a class="login-button" href="{{ url_for('login') }}">Login/SignUp</a>
+                          {% endif %}
+                      </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </header>
+        <section id="inner-headline">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h2 class="pageTitle">Login/Signup</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+    <div class="dropbox-content max-w-xl mx-auto flex">
+      <div class="dropbox-content__img w-half flex justify-center items-center">
+        <img src="../img/undraw-login.svg" alt="Login Image" />
+      </div>
+      <div class="dropbox-content__form w-half">
+        <form action="/login" method="POST" class="flex flex-col">
+          <div class="form__header flex justify-between">
+            <h5>Sign In</h5>
+            <p>or <a href="/register">create an account</a></p>
+          </div>
+          <div class="flex flex-col form__btn">
+            <button class="form__btn-social form__btn-social--google">
+              <span class="form__border flex justify-center items-center"
+                ><img src="../img/google.svg" style="height: 1rem; width: 1rem" alt=""
+              /></span>
+              <span class="form__caption">Sign in with Google</span>
+            </button>
+            <button class="form__btn-social form__btn-social--apple">
+              <span class="form__border flex justify-center items-center">
+                <img src="../img/apple.svg" style="height: 1rem; width: 1rem" alt="" />
+              </span>
+              <span class="form__caption">Sign in with Apple</span>
+            </button>
+          </div>
+          <div class="form__liners flex justify-center items-center">
+            <span class="form__line"></span>
+            <span class="form__line--caption">or</span>
+            <span class="form__line"></span>
+          </div>
+          <div class="flex flex-col form__input-group">
+            <input type="email" class="form__input form__input--email" name="email" placeholder="Email" required />
+            <input type="password" class="form__input form__input--password" name="password" placeholder="Password" required />
+          </div>
+          <div class="form__submit flex items-center justify-between">
+            <div class="flex">
+              <input type="checkbox" class="form__checklist" id="remember" />
+              <label for="remember" class="form__label">Remember me</label>
+            </div>
+            <button class="form__btn-submit"><a href="/login">Sign in</a></button>
+          </div>
+          <a href="#" class="form__forgot">Forgot Password</a>
+          <p class="form__mobile">( or <a href="/register"> create an account </a> )</p>
+          <p class="form__notes">
+            <b>This page is protected by reCAPTCHA, and subject to the Google </b><a href=""><b>Privacy Policy</b></a> <b>and</b>
+            <a href="#"><b>Terms of service</b></a>.
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="widget">
+              <h5 class="widgetheading">Our Contact</h5>
+              <address>
+              <strong>Future Prospect Inc</strong><br>
+               St.John College of Engineering<br>
+               Palghar(E).</address>
+              <p>
+                <i class="icon-phone"></i> 97867 64789<br>
+                <i class="icon-envelope-alt"></i> futureprospect@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget">
+              <h5 class="widgetheading">Quick Links</h5>
+              <ul class="link-list">
+                <li><a href="#">Latest Events</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget">
+              <h5 class="widgetheading">Latest posts</h5>
+              <ul class="link-list">
+                <li><a href="#">Career Transitions: Expert Tips</a></li>
+                <li><a href="#">Tech Trends: In-Demand Skills</a></li>
+                <li><a href="#">Work-Life Balance: Prioritizing Mental Health</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="widget">
+              <h5 class="widgetheading">Recent News</h5>
+              <ul class="link-list">
+                <li><a href="#">Inclusivity in the Workplace: Promoting Diversity</a></li>
+                <li><a href="#">Remote Work Revolution: Adapting to Change</a></li>
+                <li><a href="#">Skills Development: Lifelong Learning in Careers</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="copyright">
+                <p>
+                  <span>&copy; Above Site All right reserved.</span>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <ul class="social-network">
+                <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!-- Events Page -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Above Multi-purpose Free Bootstrap Responsive Template</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+ 
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<link href="../css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="../css/jcarousel.css" rel="stylesheet" />
+<link href="../css/flexslider.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../img/phpp1fg88ql8pum8u0o1di2hc5.png" alt="logo" style="width: 8%; height: auto;">Career Counselling Chatbot</a>                </div>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li> 
+                        <li><a href="{{ url_for('about') }}">ChatBot</a></li>
+                        <li><a href="{{ url_for('courses') }}">Events</a></li>
+                        <li><a href="{{ url_for('contact') }}">Counsellers</a></li>
+                        <li>
+                            {% if 'loggedin' in session %}
+                                <div class="user-section">
+                                    <span class="user-greeting" id="user-greeting">Hello, {{ session['name'] }}</span>
+                                    <a class="logout-button" href="{{ url_for('logout') }}">Logout</a>
+                                </div>
+                            {% else %}
+                                <a class="login-button" href="{{ url_for('login') }}">Login/SignUp</a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Events</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	 
+	<section id="content">
+		<div class="container">		 
+				
+<section class="course"> 
+
+		<div class="row">
+			<div class="col-lg-12">
+				<div class=""><h3>Courses We Offer</h3><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>Our courses are meticulously designed to empower you with knowledge and skills that fuel personal and professional growth. Whether you're aiming to enhance your expertise, explore new horizons, or gain a competitive edge, our courses are your ticket to transformative learning. Join us on this educational journey and embark on your path to a brighter future.</div>
+			</div>
+		</div>
+<div class="row">
+	<div class="col-md-4">
+		<div class="textbox">
+			<h3>College Admissions Workshop</h3>
+			<p align="justify">Join us for a comprehensive college admissions workshop where you'll receive expert guidance on choosing the right colleges, writing stellar application essays, and acing interviews.</p>
+		</div> </div>
+		<div class="col-md-4">
+		<div class="textbox">
+			  <h3> Mock Interview Practice</h3>
+			<p align="justify">Gain confidence in your interview skills through our mock interview practice. Our experts will provide feedback and valuable insights to help you excel in job or college interviews.
+			</p>
+		</div> </div>
+		<div class="col-md-4">
+		<div class="textbox">
+			  <h3>Resume Building Workshop</h3>
+			<p align="justify"> Learn the art of crafting an impressive resume that catches the eye of employers and college admissions committees. We'll cover formatting, content, and top tips for success.
+			</p>
+		</div> </div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		<div class="textbox">
+			<h3>Scholarship Information Session</h3>
+			<p align="justify">Join us to learn about various scholarships, their eligibility criteria, application procedures, and tips for securing financial aid for your education. </p>
+		</div> </div>
+		<div class="col-md-4">
+		<div class="textbox">
+			  <h3>Personality Assessment Session</h3>
+			<p align="justify">Explore your personality, strengths, and interests in our interactive workshop. Discover how this self-awareness can inform your career and education choices.</p>
+		</div> </div>
+		<div class="col-md-4">
+		<div class="textbox">
+			  <h3>Career Exploration Seminar</h3>
+			<p align="justify">Discover your potential career paths and get insights into different industries and their educational requirements. </p>
+		</div> </div>
+        </div> 
+</section>	<p><b>Explore our upcoming career counseling events, including an insightful seminar scheduled within this month, designed to provide valuable guidance and resources for your academic and professional journey.</b></p> </br>
+        <div class="row service-v1 margin-bottom-40">
+            <div class="col-md-4 md-margin-bottom-40">
+				<img class="img-responsive" src="../img/service1.jpg" alt="" style="width: 750px; height: 250px;">
+                <h3>Exploring Career Opportunities Workshop</h3>
+                <p align="justify">Join us for an interactive workshop designed to help you explore various career options. Engage in self-assessment activities, learn about emerging industries, and gain insights from experienced professionals.</p>        
+            </div>
+            <div class="col-md-4">
+                <img class="img-responsive" src="../img/service2.jpg" alt="" style="width: 750px; height: 250px;">
+                <h3>STEM Careers: Beyond the Classroom</h3>
+                <p align="justify"> Engage with professionals in Science, Technology, Engineering, and Mathematics (STEM) fields. Discover the exciting real-world applications of STEM subjects and the diverse career paths they offer.</p>        
+            </div>
+            <div class="col-md-4 md-margin-bottom-40">
+				<img class="img-responsive" src="../img/service3.jpg" alt="" style="width: 750px; height: 250px;">
+                <h3>Industry Insights Webinar Series</h3>
+                <p align="justify"> Dive deep into specific industries with our webinar series. Experts from diverse fields share trends, opportunities, and skills essential for success in today's job market.</p>        
+            </div>
+        </div> 
+ 
+
+         
+
+        
+    </div>
+    </section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">Our Contact</h5>
+						<address>
+						<strong>Future Prospect Inc</strong><br>
+						 St.John College of Engineering<br>
+						 Palghar(E).</address>
+						<p>
+							<i class="icon-phone"></i> 97867 64789<br>
+							<i class="icon-envelope-alt"></i> futureprospect@gmail.com
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">Quick Links</h5>
+						<ul class="link-list">
+							<li><a href="#">Latest Events</a></li>
+							<li><a href="#">Terms and conditions</a></li>
+							<li><a href="#">Privacy policy</a></li>
+							<li><a href="#">Career</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">Latest posts</h5>
+						<ul class="link-list">
+							<li><a href="#">Career Transitions: Expert Tips</a></li>
+							<li><a href="#">Tech Trends: In-Demand Skills</a></li>
+							<li><a href="#">Work-Life Balance: Prioritizing Mental Health</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">Recent News</h5>
+						<ul class="link-list">
+							<li><a href="#">Inclusivity in the Workplace: Promoting Diversity</a></li>
+							<li><a href="#">Remote Work Revolution: Adapting to Change</a></li>
+							<li><a href="#">Skills Development: Lifelong Learning in Careers</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="copyright">
+							<p>
+								<span>&copy; Above Site All right reserved.</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<ul class="social-network">
+							<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.fancybox.pack.js"></script>
+<script src="../js/jquery.fancybox-media.js"></script> 
+<script src="../js/portfolio/jquery.quicksand.js"></script>
+<script src="../js/portfolio/setting.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/animate.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!-- counsellers -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Counsellors</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+<!-- css -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<link href="../css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="../css/jcarousel.css" rel="stylesheet" />
+<link href="../css/flexslider.css" rel="stylesheet" />
+<link href="../css/style.css" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../img/phpp1fg88ql8pum8u0o1di2hc5.png" alt="logo" style="width: 8%; height: auto;">Career Counselling Chatbot</a>                </div>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li> 
+                        <li><a href="{{ url_for('about') }}">ChatBot</a></li>
+                        <li><a href="{{ url_for('courses') }}">Events</a></li>
+                        <li><a href="{{ url_for('contact') }}">Counsellers</a></li>
+                        <li>
+                            {% if 'loggedin' in session %}
+                                <div class="user-section">
+                                    <span class="user-greeting" id="user-greeting">Hello, {{ session['name'] }}</span>
+                                    <a class="logout-button" href="{{ url_for('logout') }}">Logout</a>
+                                </div>
+                            {% else %}
+                                <a class="login-button" href="{{ url_for('login') }}">Login/SignUp</a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header>
+
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Counsellers</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	<div class="container">
+					
+					<div class="about">
+					
+						<div class="row"> 
+							<div class="col-md-12">
+								<div class="about-logo">
+									<h3>About the Counseling Team:										<span class="color"></span></h3>
+									<p> "Our counseling team is composed of seasoned professionals who excel in providing personalized career guidance. They understand that each individual's journey is unique, and they tailor their approach accordingly. With a deep understanding of various industries and career paths, our team is well-equipped to assist individuals in making informed decisions about their future."
+									</p>
+									<p>Having delved into various industries and gained an in-depth understanding of diverse career paths, our team is well-prepared to navigate the complex landscape of career choices. They stay abreast of the latest industry trends, emerging job opportunities, and educational pathways. This wealth of knowledge allows them to provide individuals with comprehensive and up-to-date advice.</p>
+								</div>
+							</div>
+						</div>  
+						<br>
+							
+						 <div class="row">
+							<div class="col-md-6">
+								<img src="../img/section-image-1.png" alt="">
+								<div class="space"></div>
+							</div>
+							<div class="col-md-6">
+								<p>Our counselors are not just advisors, but also mentors who take pride in seeing individuals flourish in their chosen fields. They take the time to listen attentively, addressing any concerns or questions, and providing valuable insights to help individuals make informed decisions about their future.</p>
+								<p> With their guidance, individuals can embark on a career path that aligns with their passions and aspirations, setting them up for long-term success and fulfillment.</p>
+								<p>Career Counseling Benefits:</p>
+								<ul class="list-unstyled">
+									<li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Personalized Guidance: Our experienced counselors provide tailored advice based on your unique skills, interests, and aspirations.</li>
+									<li><i class="fa fa-arrow-circle-right pr-10 colored"></i> In-Depth Industry Knowledge: Our team is well-versed in various industries, enabling them to offer insights into potential career paths.</li>
+									<li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Latest Industry Trends: Stay updated on the most recent trends, emerging job opportunities, and educational pathways.</li>
+									<li><i class="fa fa-arrow-circle-right pr-10 colored"></i>Long-term Success: By aligning your career choices with your passions and strengths, you set yourself up for sustained success and fulfillment.</li>
+									<li><i class="fa fa-arrow-circle-right pr-10 colored"></i>Mentorship: Our counselors go beyond advising; they act as mentors, supporting you on your journey to a fulfilling career.</li>
+								</ul>
+							</div>
+						</div>	
+						<br/> 
+						<hr>
+						<br>
+						<div class="row">
+							<div class="col-md-4">
+								<!-- Heading and para -->
+								<div class="block-heading-two">
+									<h3><span>Why Choose Us?</span></h3>
+								</div>
+								<p>"Choosing us means choosing excellence in career counseling. Our seasoned professionals bring a wealth of knowledge and a personalized approach to guide you towards a successful future. We understand that each individual's journey is unique, and we're committed to providing tailored advice and practical steps to help you achieve your goals. With industry expertise, we provide valuable insights for informed decisions. Trust us to be your partner in shaping a fulfilling and prosperous career."
+								</p>
+							</div>
+							<div class="col-md-4">
+								<div class="block-heading-two">
+									<h3><span>Our Solution</span></h3>
+								</div>		
+								<!-- Accordion starts -->
+								<div class="panel-group" id="accordion-alt3">
+								 <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+								  <div class="panel">	
+									<!-- Panel heading -->
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
+											<i class="fa fa-angle-right"></i> Expert Guidance
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseOne-alt3" class="panel-collapse collapse">
+										<!-- Panel body -->
+										<div class="panel-body">
+											Our seasoned professionals bring extensive industry knowledge to provide you with expert career advice tailored to your unique aspirations.
+											Guiding you towards success with personalized expertise.
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
+											<i class="fa fa-angle-right"></i> Personalized Approach
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseTwo-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											We understand that every individual's journey is distinct. Our customized approach ensures you receive the guidance and resources you need to excel.
+											Tailoring our guidance to match your unique path.
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
+											<i class="fa fa-angle-right"></i> In-depth Industry Understanding
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseThree-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											With a profound understanding of various industries and career paths, we provide valuable insights to help you make well-informed decisions about your future.Empowering you with insights for a successful career.
+										</div>
+									 </div>
+								  </div>
+								  <div class="panel">
+									 <div class="panel-heading">
+										<h4 class="panel-title">
+										  <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+											<i class="fa fa-angle-right"></i> Holistic Development
+										  </a>
+										</h4>
+									 </div>
+									 <div id="collapseFour-alt3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Our approach goes beyond just career advice. We focus on your overall development, including soft skills, personal growth, and professional networking. This comprehensive approach ensures you're not just prepared for a job, but for a successful and fulfilling career journey.
+										</div>
+									 </div>
+								  </div>
+								</div>
+								<!-- Accordion ends -->
+								
+							</div>
+							
+							<div class="col-md-4">
+								<div class="block-heading-two">
+									<h3><span>Our Demographic</span></h3>
+								</div>								
+								<h6>SSC</h6>
+								<div class="progress pb-sm">
+								  <!-- White color (progress-bar-white) -->
+								  <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+									 <span class="sr-only">40% Complete (success)</span>
+								  </div>
+								</div>
+								<h6>HSC</h6>
+								<div class="progress pb-sm">
+								  <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+									 <span class="sr-only">40% Complete (success)</span>
+								  </div>
+								</div>
+								<h6>Under Graduate</h6>
+								<div class="progress pb-sm">
+								  <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+									 <span class="sr-only">40% Complete (success)</span>
+								  </div>
+								</div>
+								<h6>Post Graduate</h6>
+								<div class="progress pb-sm">
+								  <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+									 <span class="sr-only">40% Complete (success)</span>
+								  </div>
+								</div>
+							</div>
+							
+						</div>
+										
+						  
+						<hr>
+						<br>
+						<!-- Our Team starts -->
+				
+						<!-- Heading -->
+						<div class="block-heading-six">
+							<h3 class="bg-color">Our Team</h3>
+						</div>
+						<br>
+						
+						<!-- Our team starts -->
+						
+						<div class="team-six">
+							<div class="row">
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="../img/team1.jpg" alt="">
+										<!-- Name -->
+										<h4>Jennifer</h4>
+										<span class="deg"> Career Assessment Specialist
+											<br>
+											Psychometric Testing and Career Assessment
+										</span> 
+
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="../img/team2.jpg" alt="">
+										<!-- Name -->
+										<h4>John</h4>
+										<span class="deg">Technology Integration Expert
+											<br>
+											Computer Science and Technology Integration
+										</span> 
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="../img/team3.jpg" alt="">
+										<!-- Name -->
+										<h4>Christean</h4>
+										<span class="deg"> Data Analytics and Trends Specialist</span> 
+										<br>
+										Statistics, Data Science, and Analytics
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="../img/team4.jpg" alt="">
+										<!-- Name -->
+										<h4>Kerinele rase</h4>
+										<span class="deg">UX/UI Design Expert</span> 
+										<br>
+										UX/UI Design and Human-Computer Interaction
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Our team ends -->
+					  
+						
+					</div>
+									
+				</div>
+	</section>
+	<!-- --------------------------------------------------------------------------------------------------------- -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Our Contact</h5>
+					<address>
+					<strong>Future Prospect Inc</strong><br>
+					 St.John College of Engineering<br>
+					 Palghar(E).</address>
+					<p>
+						<i class="icon-phone"></i> 97867 64789<br>
+						<i class="icon-envelope-alt"></i> futureprospect@gmail.com
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Quick Links</h5>
+					<ul class="link-list">
+						<li><a href="#">Latest Events</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Career</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Latest posts</h5>
+					<ul class="link-list">
+						<li><a href="#">Career Transitions: Expert Tips</a></li>
+						<li><a href="#">Tech Trends: In-Demand Skills</a></li>
+						<li><a href="#">Work-Life Balance: Prioritizing Mental Health</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Recent News</h5>
+					<ul class="link-list">
+						<li><a href="#">Inclusivity in the Workplace: Promoting Diversity</a></li>
+						<li><a href="#">Remote Work Revolution: Adapting to Change</a></li>
+						<li><a href="#">Skills Development: Lifelong Learning in Careers</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>&copy; Above Site All right reserved.</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.fancybox.pack.js"></script>
+<script src="../js/jquery.fancybox-media.js"></script> 
+<script src="../js/portfolio/jquery.quicksand.js"></script>
+<script src="../js/portfolio/setting.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/animate.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

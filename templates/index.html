@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Career Counseling Chatbot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com" />
+<!-- css -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" />
+<link href="../css/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link href="../css/jcarousel.css" rel="stylesheet" />
+<link href="../css/flexslider.css" rel="stylesheet" />
+<link href="../js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet" />
+
+
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+<div id="wrapper">
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <a class="navbar-brand" href="{{ url_for('home') }}"><img src="../img/phpp1fg88ql8pum8u0o1di2hc5.png" alt="logo" style="width: 8%; height: auto;">Career Counselling Chatbot</a>                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ url_for('home') }}">Home</a></li> 
+                        <li><a href="{{ url_for('about') }}">ChatBot</a></li>
+                        <li><a href="{{ url_for('courses') }}">Events</a></li>
+                        <li><a href="{{ url_for('contact') }}">Counsellers</a></li>
+                        <li>
+                            {% if 'loggedin' in session %}
+                                <div class="user-section">
+                                    <span class="user-greeting" id="user-greeting">Hello, {{ session['name'] }}</span>
+                                    <a class="logout-button" href="{{ url_for('logout') }}">Logout</a>
+                                </div>
+                            {% else %}
+                                <a class="login-button" href="{{ url_for('login') }}">Login/SignUp</a>
+                            {% endif %}
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <section id="featured">
+     
+    <!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+                <img src="../img/slides/1.jpg" alt="" />
+                <div class="flex-caption">
+                   <div class="item_introtext"> 
+                    <strong>School Education</strong>
+                    <p>Laying the foundation for academic and personal growth.
+                        </p> </div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/slides/2.jpg" alt="" />
+                <div class="flex-caption">
+                     <div class="item_introtext"> 
+                    <strong>Post Graduation and Research</strong>
+                    <p>Pioneering paths for specialized expertise and groundbreaking discoveries.
+                        </p> </div>
+                </div>
+              </li>
+              <li>
+                <img src="../img/slides/3.jpg" alt="" />
+                <div class="flex-caption">
+                     <div class="item_introtext"> 
+                    <strong>College Education</strong>
+                    <p>Shaping well-rounded individuals ready to tackle professional challenges.                        
+                         </p> </div>
+                </div>
+              </li>
+            </ul>
+        </div>
+    <!-- end slider -->
+ 
+    </section>
+    <section class="callaction">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="aligncenter"><h1 class="aligncenter">Our Featured Courses</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>Discover a world of opportunities through our featured courses. Whether you're drawn to the precision of science, the dynamics of commerce, the richness of arts, or the practicality of diploma programs, we have a pathway to match your ambitions. Explore, learn, and pave the way to a fulfilling career.</div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="content">
+    
+    
+    <div class="container">
+            <div class="row">
+        <div class="skill-home"> <div class="skill-home-solid clearfix"> 
+        <div class="col-md-3 text-center">
+        <span class="icons c1"><i class="fa fa-trophy"></i></span> <div class="box-area">
+        <h3>Science</h3> <p align="justify">The science stream in education includes subjects like physics, chemistry, mathematics, and often biology. It serves as a foundation for careers in engineering, medicine, pure sciences, computer science, and more. Students choose this stream based on their interests and career goals.</p></div>
+        </div>
+        <div class="col-md-3 text-center"> 
+        <span class="icons c2"><i class="fa fa-picture-o"></i></span> <div class="box-area">
+        <h3>Commerce</h3> <p align="justify"> In the commerce stream, students typically engage with subjects such as Accounting, Business Studies, Economics, and Mathematics. This stream is a stepping stone for careers in finance, accounting, business management, economics, and related fields.</p></div>
+        </div>
+        <div class="col-md-3 text-center"> 
+        <span class="icons c3"><i class="fa fa-desktop"></i></span> <div class="box-area">
+        <h3>Arts</h3> <p align="justify">The arts stream offers a diverse range of subjects, including History, Geography, Sociology, Political Science, Psychology, Literature, and more. It provides flexibility for careers in various domains, such as education, journalism, social work, psychology, or creative arts like writing, music, and theater.</p></div>
+        </div>
+        <div class="col-md-3 text-center"> 
+        <span class="icons c4"><i class="fa fa-globe"></i></span> <div class="box-area">
+        <h3>Diploma</h3> <p align="justify"> Diploma programs, shorter than degrees, provide practical skills for specific careers like business, healthcare, or information technology. Graduates can directly enter their chosen field or pursue further education.</p>
+        </div></div>
+        </div></div>
+        </div> 
+         
+
+    </div>
+    </section>
+    <div class="testimonial-area">
+    <div class="testimonial-solid">
+        <div class="container">
+            <div class="testi-icon-area">
+                <div class="quote">
+                    <i class="fa fa-microphone"></i>
+                </div>
+            </div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="">
+                        <a href="#"></a>
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class="">
+                        <a href="#"></a>
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class="active">
+                        <a href="#"></a>
+                    </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3" class="">
+                        <a href="#"></a>
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item">
+                        <p>Success usually comes to those who are too busy to be looking for it.</p>
+                        <p>
+                            <b>- Henry David Thoreau -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.</p>
+                        <p>
+                            <b>- Albert Schweitzer -</b>
+                        </p>
+                    </div>
+                    <div class="item active">
+                        <p>Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.</p>
+                        <p>
+                            <b>- Christian D. Larson -</b>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>I can't change the direction of the wind, but I can adjust my sails to always reach my destination.</p>
+                        <p>
+                            <b>- Jimmy Dean -</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="courses">
+<div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="aligncenter"><h2 class="aligncenter">Counseling Events</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>Welcome to our Counseling Events. Your path to growth and success begins here. Join our expert-led sessions to gain the knowledge and skills needed for informed education and career choices. From college admissions to career building, we're here to empower you. Register for our upcoming events and embark on your journey to success.
+                </div>
+            </div>
+        </div>
+<div class="row">
+            <div class="col-md-4">
+            <div class="textbox">
+                <h3>College Admissions Workshop</h3>
+                <p align="justify">Join us for a comprehensive college admissions workshop where you'll receive expert guidance on choosing the right colleges, writing stellar application essays, and acing interviews.</p>
+            </div> </div>
+            <div class="col-md-4">
+            <div class="textbox">
+                  <h3> Mock Interview Practice</h3>
+                <p align="justify">Gain confidence in your interview skills through our mock interview practice. Our experts will provide feedback and valuable insights to help you excel in job or college interviews.
+                </p>
+            </div> </div>
+            <div class="col-md-4">
+            <div class="textbox">
+                  <h3>Resume Building Workshop</h3>
+                <p align="justify"> Learn the art of crafting an impressive resume that catches the eye of employers and college admissions committees. We'll cover formatting, content, and top tips for success.
+                </p>
+            </div> </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            <div class="textbox">
+                <h3>Scholarship Information Session</h3>
+                <p align="justify">Join us to learn about various scholarships, their eligibility criteria, application procedures, and tips for securing financial aid for your education. </p>
+            </div> </div>
+            <div class="col-md-4">
+            <div class="textbox">
+                  <h3>Personality Assessment Session</h3>
+                <p align="justify">Explore your personality, strengths, and interests in our interactive workshop. Discover how this self-awareness can inform your career and education choices.</p>
+            </div> </div>
+            <div class="col-md-4">
+            <div class="textbox">
+                  <h3>Career Exploration Seminar</h3>
+                <p align="justify">Discover your potential career paths and get insights into different industries and their educational requirements. </p>
+            </div> </div>
+        </div>
+</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Our Contact</h5>
+					<address>
+					<strong>Future Prospect Inc</strong><br>
+					 St.John College of Engineering<br>
+					 Palghar(E).</address>
+					<p>
+						<i class="icon-phone"></i> 97867 64789<br>
+						<i class="icon-envelope-alt"></i> futureprospect@gmail.com
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Quick Links</h5>
+					<ul class="link-list">
+						<li><a href="#">Latest Events</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Career</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Latest posts</h5>
+					<ul class="link-list">
+						<li><a href="#">Career Transitions: Expert Tips</a></li>
+						<li><a href="#">Tech Trends: In-Demand Skills</a></li>
+						<li><a href="#">Work-Life Balance: Prioritizing Mental Health</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Recent News</h5>
+					<ul class="link-list">
+						<li><a href="#">Inclusivity in the Workplace: Promoting Diversity</a></li>
+						<li><a href="#">Remote Work Revolution: Adapting to Change</a></li>
+						<li><a href="#">Skills Development: Lifelong Learning in Careers</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>&copy; Above Site All right reserved.</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.fancybox.pack.js"></script>
+<script src="../js/jquery.fancybox-media.js"></script> 
+<script src="../js/portfolio/jquery.quicksand.js"></script>
+<script src="../js/portfolio/setting.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/animate.js"></script>
+<script src="../js/custom.js"></script>
+<script src="../js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>
